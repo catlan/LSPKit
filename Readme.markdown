@@ -4,11 +4,11 @@
 
 ## Sample Script Editor
 
-<img src="https://raw.githubusercontent.com/catlan/LSPKit/master/Sample/Screenshots/Screenshot%201.png" srcset="https://raw.githubusercontent.com/catlan/LSPKit/master/Sample/Screenshots/Screenshot%201@2x.png 2x" />
+<img src="https://raw.githubusercontent.com/catlan/LSPKit/master/Sample/Screenshots/Screenshot%201@2x.png" width="592" />
 
-<img src="https://raw.githubusercontent.com/catlan/LSPKit/master/Sample/Screenshots/Screenshot%202.png" srcset="https://raw.githubusercontent.com/catlan/LSPKit/master/Sample/Screenshots/Screenshot%202@2x.png 2x" />
+<img src="https://raw.githubusercontent.com/catlan/LSPKit/master/Sample/Screenshots/Screenshot%202@2x.png" width="741" />
 
-<img src="https://raw.githubusercontent.com/catlan/LSPKit/master/Sample/Screenshots/Screenshot%203.png" srcset="https://raw.githubusercontent.com/catlan/LSPKit/master/Sample/Screenshots/Screenshot%203@2x.png 2x" />
+<img src="https://raw.githubusercontent.com/catlan/LSPKit/master/Sample/Screenshots/Screenshot%203@2x.png" width="592" />
 
 ## License
 
