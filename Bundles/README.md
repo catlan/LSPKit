@@ -1,6 +1,6 @@
 ##  Setup
 
-node from https://nodejs.org version 11.6.0 Current.
+Node.js from https://nodejs.org version 11.6.0 Current.
 
 ### bash-language-server
 
