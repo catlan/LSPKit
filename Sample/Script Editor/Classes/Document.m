@@ -619,8 +619,7 @@
     NSRange wordSelectionRange = [textView selectionRangeForProposedRange:[textView selectedRange] granularity:NSSelectByWord];
     if (NSEqualRanges(_wordSelectionRange, wordSelectionRange) == NO) {
         [_langClient documentHighlight:[self URI] inText:[self content] forCharacterAtIndex:wordSelectionRange.location completionHandler:^(NSArray<LSPDocumentHighlight *> *highlights, NSError *error) {
-            //NSColor *color = [NSColor colorWithRed:0.642038 green:0.802669 blue:0.999195 alpha:1.0];
-            NSColor *color = [NSColor colorWithRed:234.0/255.0 green:238.0/255.0 blue:248.0/255.0 alpha:1.0];
+            NSColor *color = [NSColor colorWithRed:221.0/255.0 green:228.0/255.0 blue:244.0/255.0 alpha:1.0];
             NSMutableArray *wordHighlights = [NSMutableArray arrayWithCapacity:[highlights count]];
             for (LSPDocumentHighlight *highlight in highlights) {
                 ScriptTextViewHighlight *item = [ScriptTextViewHighlight highlight:color range:[highlight range]];
@@ -663,7 +662,7 @@
 - (void)textView:(ScriptTextView *)textView displayToolTip:(NSString *)tooltip forCharacterAtIndex:(NSUInteger)characterIndex point:(NSPoint)point {
     _tooltipViewController = [[NSStoryboard storyboardWithName:@"Tooltip" bundle:nil] instantiateInitialController];
     _tooltipViewController.representedObject = tooltip;
-    [_documentViewController presentViewController:_tooltipViewController asPopoverRelativeToRect:[textView rectForCharacterRange:NSMakeRange(characterIndex, 1)] ofView:textView preferredEdge:NSRectEdgeMinY behavior:NSPopoverBehaviorSemitransient];
+    [_documentViewController presentViewController:_tooltipViewController asPopoverRelativeToRect:[textView rectForCharacterRange:NSMakeRange(characterIndex, 1)] ofView:textView preferredEdge:NSRectEdgeMaxY behavior:NSPopoverBehaviorSemitransient];
 }
 
 - (void)clearDiagnostics {
@@ -702,7 +701,6 @@
 }
 
 - (NSView *)textView:(ScriptTextView *)textView diagnosticViewForCharacterRange:(NSRange)charRange {
-    //NSRange searchRange = NSMakeRange(charRange.location, charRange.length + 1);
     for (DiagnosticViewController *diagnosticViewController in _diagnosticViewControllers) {
         NSRange diagnosticRange = diagnosticViewController.characterRange;
         NSRange range = NSIntersectionRange(diagnosticRange, charRange);
