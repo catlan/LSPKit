@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/catlan/LSPKit.svg?branch=master)](https://travis-ci.org/catlan/LSPKit)
 
-# LSPKit - A Language Server Protocol implementations for Cocoa ☕️
+# LSPKit - A Language Server Protocol implementation for Cocoa ☕️
 
-LSPKit is design to easily integrate into the Cocoa Document Model and Text System. 
+LSPKit is designed to easily integrate into the Cocoa Document Model and Text System. 
 
 ### Document - Simple Reading and Writing
 
@@ -13,21 +13,21 @@ LSPKit is design to easily integrate into the Cocoa Document Model and Text Syst
 |- writeToURL: ofType: forSaveOperation: originalContentsURL: error: | - documentDidSave: |
 |- close | - documentDidClose: |
 
-### Text Synchronization
+### Text Synchronization 👯‍♀️
 
 LSPKit supports incremental document changes and uses coalescing on `-document:changeTextInRange:replacementString:`.
 
 What does that mean? When the user types text and the `-textView:shouldChangeTextInRange:replacementString:` delegate gets called multiple times, `-document:changeTextInRange:replacementString:` doesn't post immediately a '*textDocument/didChange*' notification, but rather a notification is queued. Coalescing means that if a notification is posted which matches one already in the queue, the two are merged, so that only a single notification is posted to observers. When the user stops typing, the single '*textDocument/didChange*' notification in the queue (due to coalescing) is posted when the run loop enters its wait state.
 
-### Termination Observer
+### Termination Observer 🧨
 
 `-addTerminationObserver:block:` makes it easy to restore the language server document state in case the language server process crashes.
 
-### Bundles
+### Bundles 📦
 
 Bundles are used to add language servers. Currently the two language servers [bash-language-server](https://github.com/mads-hartmann/bash-language-server) and [vscode-html-languageserver](https://github.com/Microsoft/vscode/tree/master/extensions/html-language-features/server) are included.
 
-## Sample Script Editor
+## Sample 🧪 - Script Editor 
 
 The sample shows how to integrate LSPKit and how to implement *NSTextView* features like highlight current line, highlighting of line for diagnotics, highlighting of words, and how to layout views left aligned to line content.
 
