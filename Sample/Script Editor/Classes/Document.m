@@ -51,7 +51,6 @@
 #pragma mark DiagnosticViewController
 
 @interface DiagnosticViewController : NSViewController <NSPopoverDelegate>
-/** When binding the value/attributed string to NSTextView the editable property changes. An additional binding of editable fixes this   */
 @property IBOutlet NSTextView *textView;
 @property NSRange characterRange;
 @end
@@ -90,7 +89,6 @@
 #pragma mark TooltipViewController
 
 @interface TooltipViewController : NSViewController
-/** When binding the value/attributed string to NSTextView the editable property changes. An additional binding of editable fixes this   */
 @property IBOutlet NSTextView *textView;
 @end
 
