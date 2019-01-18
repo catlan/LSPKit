@@ -31,13 +31,13 @@ Bundles are used to add language servers. Currently the two language servers [ba
 
 The sample shows how to integrate LSPKit and how to implement *NSTextView* features like highlight current line, highlighting of line for diagnotics, highlighting of words, and how to layout views left aligned to line content.
 
-See highlight current line ([code](https://github.com/catlan/LSPKit/blob/cb4db0c45c0d0cdc8aad9e03bce33d93b80e06d5/Sample/Script%20Editor/Classes/Document.m#L288)) and highlighting of words ([code](https://github.com/catlan/LSPKit/blob/cb4db0c45c0d0cdc8aad9e03bce33d93b80e06d5/Sample/Script%20Editor/Classes/Document.m#L300)):
+See highlight current line ([code](https://github.com/catlan/LSPKit/blob/ddd01868dcccc21be581f3afc6c0478f753fc77d/Sample/Script%20Editor/Classes/Document.m#L286-L296)) and highlighting of words ([code](https://github.com/catlan/LSPKit/blob/ddd01868dcccc21be581f3afc6c0478f753fc77d/Sample/Script%20Editor/Classes/Document.m#L298-L306)):
 <img src="https://raw.githubusercontent.com/catlan/LSPKit/master/Sample/Screenshots/Screenshot%201@2x.png" width="592" />
 
-Postion *NSPopover* on a word ([part1](https://github.com/catlan/LSPKit/blob/cb4db0c45c0d0cdc8aad9e03bce33d93b80e06d5/Sample/Script%20Editor/Classes/Document.m#L217), [part2](https://github.com/catlan/LSPKit/blob/cb4db0c45c0d0cdc8aad9e03bce33d93b80e06d5/Sample/Script%20Editor/Classes/Document.m#L663)): 
+Postion *NSPopover* on a word ([part1](https://github.com/catlan/LSPKit/blob/ddd01868dcccc21be581f3afc6c0478f753fc77d/Sample/Script%20Editor/Classes/Document.m#L215-L222), [part2](https://github.com/catlan/LSPKit/blob/ddd01868dcccc21be581f3afc6c0478f753fc77d/Sample/Script%20Editor/Classes/Document.m#L660-L664)): 
 <img src="https://raw.githubusercontent.com/catlan/LSPKit/master/Sample/Screenshots/Screenshot%202@2x.png" width="741" />
 
-Diagnostic view left aligned to line content ([code](https://github.com/catlan/LSPKit/blob/cb4db0c45c0d0cdc8aad9e03bce33d93b80e06d5/Sample/Script%20Editor/Classes/Document.m#L391)):
+Diagnostic view left aligned to line content ([code](https://github.com/catlan/LSPKit/blob/ddd01868dcccc21be581f3afc6c0478f753fc77d/Sample/Script%20Editor/Classes/Document.m#L389-L413)):
 <img src="https://raw.githubusercontent.com/catlan/LSPKit/master/Sample/Screenshots/Screenshot%203@2x.png" width="592" />
 
 ## License
