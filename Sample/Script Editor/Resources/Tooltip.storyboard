@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="JcF-gh-szJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tooltip View Controller-->
+        <scene sceneID="k4Z-ah-0QH">
+            <objects>
+                <viewController id="JcF-gh-szJ" customClass="TooltipViewController" sceneMemberID="viewController">
+                    <view key="view" id="mTB-wf-aZP">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="180"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tH-pR-pwS">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="180"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="KJP-ct-09K">
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="180"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView editable="NO" selectable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="bar" smartInsertDelete="YES" id="pqm-2M-2YJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="420" height="160"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <size key="minSize" width="420" height="160"/>
+                                            <size key="maxSize" width="450" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <binding destination="JcF-gh-szJ" name="editable" keyPath="self.representedObject" id="vKn-A5-Ida">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">NSIsNil</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="JcF-gh-szJ" name="value" keyPath="self.representedObject" id="WzP-dt-10V"/>
+                                            </connections>
+                                        </textView>
+                                    </subviews>
+                                    <edgeInsets key="contentInsets" left="15" right="15" top="10" bottom="10"/>
+                                </clipView>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="rMO-8U-PVt">
+                                    <rect key="frame" x="434" y="0.0" width="16" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="4tH-pR-pwS" firstAttribute="leading" secondItem="mTB-wf-aZP" secondAttribute="leading" id="FPa-wg-Yjl"/>
+                            <constraint firstAttribute="trailing" secondItem="4tH-pR-pwS" secondAttribute="trailing" id="XDu-sz-YHb"/>
+                            <constraint firstItem="4tH-pR-pwS" firstAttribute="top" secondItem="mTB-wf-aZP" secondAttribute="top" id="aj2-rn-MsV"/>
+                            <constraint firstAttribute="bottom" secondItem="4tH-pR-pwS" secondAttribute="bottom" id="eua-C5-pm1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="pqm-2M-2YJ" id="X9S-Kv-9c4"/>
+                    </connections>
+                </viewController>
+                <customObject id="cHP-JT-YrT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="145" y="81"/>
+        </scene>
+    </scenes>
+</document>

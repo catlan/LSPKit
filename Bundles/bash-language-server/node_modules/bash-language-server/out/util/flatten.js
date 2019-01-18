@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function flattenArray(nestedArray) {
+    return nestedArray.reduce((acc, array) => [...acc, ...array], []);
+}
+exports.flattenArray = flattenArray;
+function flattenObjectValues(object) {
+    return flattenArray(Object.keys(object).map(objectKey => object[objectKey]));
+}
+exports.flattenObjectValues = flattenObjectValues;
+//# sourceMappingURL=flatten.js.map

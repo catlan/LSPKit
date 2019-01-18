@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="jPe-XK-UN7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Diagnostic View Controller-->
+        <scene sceneID="mu3-wn-VDX">
+            <objects>
+                <viewController id="jPe-XK-UN7" customClass="DiagnosticViewController" sceneMemberID="viewController">
+                    <view key="view" id="cb0-yG-lri">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="5bZ-Fl-avP" id="H2i-Yk-ovd"/>
+                    </connections>
+                </viewController>
+                <customObject id="qYW-Qq-PRN" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="bar" smartInsertDelete="YES" id="5bZ-Fl-avP">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    <size key="minSize" width="240" height="135"/>
+                    <size key="maxSize" width="240" height="10000000"/>
+                    <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                </textView>
+            </objects>
+            <point key="canvasLocation" x="-71" y="-314"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="UMK-DP-n6z">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="lLL-mo-tnC">
+            <objects>
+                <windowController id="UMK-DP-n6z" customClass="DocumentWindowController" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="Document" animationBehavior="default" id="5EV-yA-Cnw">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="163" y="208" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+                        <connections>
+                            <outlet property="delegate" destination="UMK-DP-n6z" id="Zwc-7Z-mh3"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="7CF-Ev-R2G" kind="relationship" relationship="window.shadowedContentViewController" id="zbr-9N-xLl"/>
+                    </connections>
+                </windowController>
+                <customObject id="lhM-U8-Dhz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Document View Controller-->
+        <scene sceneID="MbM-xn-g94">
+            <objects>
+                <viewController id="7CF-Ev-R2G" customClass="DocumentViewController" sceneMemberID="viewController">
+                    <view key="view" id="FFI-9f-q41">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="410"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atx-n1-45g">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="410"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="tlt-az-wl9">
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="410"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="bar" allowsUndo="YES" smartInsertDelete="YES" id="5gM-ft-fdl" customClass="ScriptTextView">
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="410"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="480" height="410"/>
+                                            <size key="maxSize" width="480" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <binding destination="7CF-Ev-R2G" name="value" keyPath="self.representedObject" id="7wp-0N-Otq"/>
+                                            </connections>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="d75-P8-Ltb">
+                                    <rect key="frame" x="464" y="0.0" width="16" height="410"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="atx-n1-45g" firstAttribute="top" secondItem="FFI-9f-q41" secondAttribute="top" id="0Mm-6Q-FaE"/>
+                            <constraint firstAttribute="bottom" secondItem="atx-n1-45g" secondAttribute="bottom" id="9bZ-pY-hCw"/>
+                            <constraint firstAttribute="trailing" secondItem="atx-n1-45g" secondAttribute="trailing" id="Y9N-6e-pov"/>
+                            <constraint firstItem="atx-n1-45g" firstAttribute="leading" secondItem="FFI-9f-q41" secondAttribute="leading" id="jTx-qi-Qlt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="5gM-ft-fdl" id="GrA-lU-LgH"/>
+                    </connections>
+                </viewController>
+                <customObject id="ZbA-qM-erk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="675"/>
+        </scene>
+    </scenes>
+</document>

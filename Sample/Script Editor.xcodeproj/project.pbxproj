@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D14C4CB321EBE2A700278697 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D14C4CB221EBE2A700278697 /* AppDelegate.m */; };
+		D14C4CB621EBE2A700278697 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = D14C4CB521EBE2A700278697 /* Document.m */; };
+		D14C4CBB21EBE2A900278697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14C4CBA21EBE2A900278697 /* Assets.xcassets */; };
+		D14C4CBE21EBE2AA00278697 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14C4CBC21EBE2A900278697 /* MainMenu.xib */; };
+		D14C4CC121EBE2AA00278697 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D14C4CC021EBE2AA00278697 /* main.m */; };
+		D14C4CD421EBE2FD00278697 /* LSPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14C4CCF21EBE2D600278697 /* LSPKit.framework */; };
+		D14C4CD521EBE2FD00278697 /* LSPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D14C4CCF21EBE2D600278697 /* LSPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D14C4CDA21ECA6A800278697 /* Tooltip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14C4CD921ECA6A800278697 /* Tooltip.storyboard */; };
+		D14C4CDC21ECB34200278697 /* Document.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14C4CDB21ECB34200278697 /* Document.storyboard */; };
+		D14C4CE521EDC9AC00278697 /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = D14C4CE121EDC9AC00278697 /* NoodleLineNumberView.m */; };
+		D14C4CE621EDC9AC00278697 /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = D14C4CE421EDC9AC00278697 /* NoodleLineNumberMarker.m */; };
+		D14E436121EF927C001882BC /* Diagnostic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E436021EF927C001882BC /* Diagnostic.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D14C4CCE21EBE2D600278697 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D14C4CC821EBE2D600278697 /* LSPKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D13EB15121EA5B1600E56DC9;
+			remoteInfo = LSPKit;
+		};
+		D14C4CD021EBE2D600278697 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D14C4CC821EBE2D600278697 /* LSPKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D13EB15A21EA5B1600E56DC9;
+			remoteInfo = LSPKitTests;
+		};
+		D14C4CD221EBE2D600278697 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D14C4CC821EBE2D600278697 /* LSPKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D13EB16F21EA5B6000E56DC9;
+			remoteInfo = "bash-language-server";
+		};
+		D14C4CD621EBE2FD00278697 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D14C4CC821EBE2D600278697 /* LSPKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D13EB15021EA5B1600E56DC9;
+			remoteInfo = LSPKit;
+		};
+		D14E435A21EF88EF001882BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D14C4CC821EBE2D600278697 /* LSPKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D14C4CF521EF64AC00278697;
+			remoteInfo = "vscode-html-languageserver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D14C4CD821EBE2FD00278697 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D14C4CD521EBE2FD00278697 /* LSPKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D14C4CAE21EBE2A700278697 /* Script Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Script Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14C4CB121EBE2A700278697 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D14C4CB221EBE2A700278697 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D14C4CB421EBE2A700278697 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		D14C4CB521EBE2A700278697 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		D14C4CBA21EBE2A900278697 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D14C4CBD21EBE2A900278697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D14C4CBF21EBE2AA00278697 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		D14C4CC021EBE2AA00278697 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D14C4CC221EBE2AA00278697 /* Script_Editor.entitlements */ = {isa = PBXFileReference; explicitFileType = text.xml; path = Script_Editor.entitlements; sourceTree = "<group>"; };
+		D14C4CC821EBE2D600278697 /* LSPKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LSPKit.xcodeproj; path = ../LSPKit.xcodeproj; sourceTree = "<group>"; };
+		D14C4CD921ECA6A800278697 /* Tooltip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tooltip.storyboard; sourceTree = "<group>"; };
+		D14C4CDB21ECB34200278697 /* Document.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Document.storyboard; sourceTree = "<group>"; };
+		D14C4CE121EDC9AC00278697 /* NoodleLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberView.m; sourceTree = "<group>"; };
+		D14C4CE221EDC9AC00278697 /* NoodleLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberView.h; sourceTree = "<group>"; };
+		D14C4CE321EDC9AC00278697 /* NoodleLineNumberMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberMarker.h; sourceTree = "<group>"; };
+		D14C4CE421EDC9AC00278697 /* NoodleLineNumberMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberMarker.m; sourceTree = "<group>"; };
+		D14E436021EF927C001882BC /* Diagnostic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diagnostic.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D14C4CAB21EBE2A700278697 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14C4CD421EBE2FD00278697 /* LSPKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D14C4CA521EBE2A700278697 = {
+			isa = PBXGroup;
+			children = (
+				D14C4CC821EBE2D600278697 /* LSPKit.xcodeproj */,
+				D14C4CB021EBE2A700278697 /* Script Editor */,
+				D14C4CAF21EBE2A700278697 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D14C4CAF21EBE2A700278697 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D14C4CAE21EBE2A700278697 /* Script Editor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D14C4CB021EBE2A700278697 /* Script Editor */ = {
+			isa = PBXGroup;
+			children = (
+				D14E436221EF92A5001882BC /* Classes */,
+				D14E436421EF92E1001882BC /* Resources */,
+				D14E436321EF92C1001882BC /* Other Sources */,
+			);
+			path = "Script Editor";
+			sourceTree = "<group>";
+		};
+		D14C4CC921EBE2D600278697 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D14C4CCF21EBE2D600278697 /* LSPKit.framework */,
+				D14C4CD121EBE2D600278697 /* LSPKitTests.xctest */,
+				D14C4CD321EBE2D600278697 /* bash-language-server.bundle */,
+				D14E435B21EF88EF001882BC /* vscode-html-languageserver.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D14E436221EF92A5001882BC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D14C4CB121EBE2A700278697 /* AppDelegate.h */,
+				D14C4CB221EBE2A700278697 /* AppDelegate.m */,
+				D14C4CB421EBE2A700278697 /* Document.h */,
+				D14C4CB521EBE2A700278697 /* Document.m */,
+				D14C4CE321EDC9AC00278697 /* NoodleLineNumberMarker.h */,
+				D14C4CE421EDC9AC00278697 /* NoodleLineNumberMarker.m */,
+				D14C4CE221EDC9AC00278697 /* NoodleLineNumberView.h */,
+				D14C4CE121EDC9AC00278697 /* NoodleLineNumberView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D14E436321EF92C1001882BC /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D14C4CBF21EBE2AA00278697 /* Info.plist */,
+				D14C4CC021EBE2AA00278697 /* main.m */,
+				D14C4CC221EBE2AA00278697 /* Script_Editor.entitlements */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
+		D14E436421EF92E1001882BC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D14C4CBA21EBE2A900278697 /* Assets.xcassets */,
+				D14C4CBC21EBE2A900278697 /* MainMenu.xib */,
+				D14C4CDB21ECB34200278697 /* Document.storyboard */,
+				D14C4CD921ECA6A800278697 /* Tooltip.storyboard */,
+				D14E436021EF927C001882BC /* Diagnostic.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D14C4CAD21EBE2A700278697 /* Script Editor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D14C4CC521EBE2AA00278697 /* Build configuration list for PBXNativeTarget "Script Editor" */;
+			buildPhases = (
+				D14C4CAA21EBE2A700278697 /* Sources */,
+				D14C4CAB21EBE2A700278697 /* Frameworks */,
+				D14C4CAC21EBE2A700278697 /* Resources */,
+				D14C4CD821EBE2FD00278697 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D14C4CD721EBE2FD00278697 /* PBXTargetDependency */,
+			);
+			name = "Script Editor";
+			productName = "Script Editor";
+			productReference = D14C4CAE21EBE2A700278697 /* Script Editor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D14C4CA621EBE2A700278697 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Letter Opener GmbH";
+				TargetAttributes = {
+					D14C4CAD21EBE2A700278697 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = D14C4CA921EBE2A700278697 /* Build configuration list for PBXProject "Script Editor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D14C4CA521EBE2A700278697;
+			productRefGroup = D14C4CAF21EBE2A700278697 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D14C4CC921EBE2D600278697 /* Products */;
+					ProjectRef = D14C4CC821EBE2D600278697 /* LSPKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D14C4CAD21EBE2A700278697 /* Script Editor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D14C4CCF21EBE2D600278697 /* LSPKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LSPKit.framework;
+			remoteRef = D14C4CCE21EBE2D600278697 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D14C4CD121EBE2D600278697 /* LSPKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LSPKitTests.xctest;
+			remoteRef = D14C4CD021EBE2D600278697 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D14C4CD321EBE2D600278697 /* bash-language-server.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "bash-language-server.bundle";
+			remoteRef = D14C4CD221EBE2D600278697 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D14E435B21EF88EF001882BC /* vscode-html-languageserver.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "vscode-html-languageserver.bundle";
+			remoteRef = D14E435A21EF88EF001882BC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D14C4CAC21EBE2A700278697 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14C4CDA21ECA6A800278697 /* Tooltip.storyboard in Resources */,
+				D14C4CBB21EBE2A900278697 /* Assets.xcassets in Resources */,
+				D14C4CBE21EBE2AA00278697 /* MainMenu.xib in Resources */,
+				D14E436121EF927C001882BC /* Diagnostic.storyboard in Resources */,
+				D14C4CDC21ECB34200278697 /* Document.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D14C4CAA21EBE2A700278697 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14C4CE621EDC9AC00278697 /* NoodleLineNumberMarker.m in Sources */,
+				D14C4CB621EBE2A700278697 /* Document.m in Sources */,
+				D14C4CC121EBE2AA00278697 /* main.m in Sources */,
+				D14C4CE521EDC9AC00278697 /* NoodleLineNumberView.m in Sources */,
+				D14C4CB321EBE2A700278697 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D14C4CD721EBE2FD00278697 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LSPKit;
+			targetProxy = D14C4CD621EBE2FD00278697 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D14C4CBC21EBE2A900278697 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D14C4CBD21EBE2A900278697 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D14C4CC321EBE2AA00278697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D14C4CC421EBE2AA00278697 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D14C4CC621EBE2AA00278697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2WB96AW889;
+				INFOPLIST_FILE = "Script Editor/Other Sources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.letteropener.Script-Editor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		D14C4CC721EBE2AA00278697 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2WB96AW889;
+				INFOPLIST_FILE = "Script Editor/Other Sources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.letteropener.Script-Editor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D14C4CA921EBE2A700278697 /* Build configuration list for PBXProject "Script Editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D14C4CC321EBE2AA00278697 /* Debug */,
+				D14C4CC421EBE2AA00278697 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D14C4CC521EBE2AA00278697 /* Build configuration list for PBXNativeTarget "Script Editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D14C4CC621EBE2AA00278697 /* Debug */,
+				D14C4CC721EBE2AA00278697 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D14C4CA621EBE2A700278697 /* Project object */;
+}
