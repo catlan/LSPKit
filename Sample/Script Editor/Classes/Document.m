@@ -140,7 +140,7 @@
 
 @interface ScriptTextView : NSTextView <NSLayoutManagerDelegate>
 @property (weak) id<ScriptTextViewDelegate> delegate;
-@property NSColor *highlightCurrentLineColor;
+@property (nonatomic) NSColor *currentLineHighlightColor;
 @property (nonatomic) NSArray<ScriptTextViewHighlight *> *lineHighlights;
 @property (nonatomic) NSArray<ScriptTextViewHighlight *> *wordHighlights;
 @end
@@ -255,7 +255,7 @@
     BOOL hasExtraLine = [self hasExtraLine];
     BOOL hasNoExtraLine = !hasExtraLine;
     
-    if ([_lineHighlights count] == 0 && [_wordHighlights count] == 0 && _highlightCurrentLineColor == nil)
+    if ([_lineHighlights count] == 0 && [_wordHighlights count] == 0 && _currentLineHighlightColor == nil)
         return;
     
     // Couldn't get NSTextView to call -drawViewBackgroundInRect:
@@ -285,15 +285,15 @@
             }
         }
         
-        if (_highlightCurrentLineColor && selectedRange.length == 0) {
+        if (_currentLineHighlightColor && selectedRange.length == 0) {
             BOOL isEndOfFile = (selectedRange.location == stringLength);
             BOOL isEndOfParagraph =  (selectedRange.location == NSMaxRange(paragraphCharRange));
             if (hasNoExtraLine && isEndOfFile && isEndOfParagraph) {
                 NSRect paragraphRect = [self paragraphRectInGlyphRange:paragraphGlyphRange];
-                [self drawLineBackgroundInRect:paragraphRect color:_highlightCurrentLineColor];
+                [self drawLineBackgroundInRect:paragraphRect color:_currentLineHighlightColor];
             } else if (NSLocationInRange(selectedRange.location, paragraphCharRange)) {
                 NSRect paragraphRect = [self paragraphRectInGlyphRange:paragraphGlyphRange];
-                [self drawLineBackgroundInRect:paragraphRect color:_highlightCurrentLineColor];
+                [self drawLineBackgroundInRect:paragraphRect color:_currentLineHighlightColor];
             }
         }
         
@@ -316,10 +316,10 @@
                 [self drawLineBackgroundInRect:[layoutManager extraLineFragmentRect] color:[highlight color]];
             }
         }
-        // highlightCurrentLine in extraLineFragment
-        if (_highlightCurrentLineColor) {
+        // currentLineHighlightColor in extraLineFragment
+        if (_currentLineHighlightColor) {
             if (stringLength == selectedRange.location && selectedRange.length == 0) {
-                [self drawLineBackgroundInRect:[layoutManager extraLineFragmentRect] color:_highlightCurrentLineColor];
+                [self drawLineBackgroundInRect:[layoutManager extraLineFragmentRect] color:_currentLineHighlightColor];
             }
         }
         // diagnosticView in extraLineFragment
@@ -369,7 +369,7 @@
 
 - (void)setSelectedRanges:(NSArray<NSValue *> *)ranges affinity:(NSSelectionAffinity)affinity stillSelecting:(BOOL)stillSelectingFlag {
     [super setSelectedRanges:ranges affinity:affinity stillSelecting:stillSelectingFlag];
-    if (_highlightCurrentLineColor) {
+    if (_currentLineHighlightColor) {
         [self setNeedsDisplayInRect:[self bounds] avoidAdditionalLayout:YES];
     }
 }
@@ -446,7 +446,7 @@
 @dynamic representedObject;
 
 - (void)viewDidLoad {
-    _textView.highlightCurrentLineColor = [NSColor colorWithRed:0.909804 green:0.950667 blue:0.999799 alpha:1.0];
+    _textView.currentLineHighlightColor = [NSColor colorWithRed:0.909804 green:0.950667 blue:0.999799 alpha:1.0];
     
     NoodleLineNumberView *lineNumberView = [[NoodleLineNumberView alloc] initWithScrollView:[_textView enclosingScrollView]];
     [[_textView enclosingScrollView] setVerticalRulerView:lineNumberView];
