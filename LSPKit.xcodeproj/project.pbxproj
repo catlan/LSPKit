@@ -19,8 +19,9 @@
 		D14C4CE921EDDE7000278697 /* LSPCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = D14C4CE721EDDE7000278697 /* LSPCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D14C4CEA21EDDE7000278697 /* LSPCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D14C4CE821EDDE7000278697 /* LSPCommon.m */; };
 		D14C4CFE21EF677700278697 /* vscode-html-languageserver.bundle in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = D14C4CF521EF64AC00278697 /* vscode-html-languageserver.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D14E435E21EF8D6C001882BC /* node in Copy Executables */ = {isa = PBXBuildFile; fileRef = D13EB17821EA5BFB00E56DC9 /* node */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D14E435F21EF8D80001882BC /* node in Copy Executables */ = {isa = PBXBuildFile; fileRef = D13EB17821EA5BFB00E56DC9 /* node */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D1EB7CFB21F375B6001688EA /* bash-language-server in Copy Executables */ = {isa = PBXBuildFile; fileRef = D1EB7CF621F3759A001688EA /* bash-language-server */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D1EB7CFC21F375B6001688EA /* tree_sitter_bash_binding.node in Copy Executables */ = {isa = PBXBuildFile; fileRef = D1EB7CF521F3758F001688EA /* tree_sitter_bash_binding.node */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D1EB7CFD21F375B6001688EA /* tree_sitter_runtime_binding.node in Copy Executables */ = {isa = PBXBuildFile; fileRef = D1EB7CF721F3759E001688EA /* tree_sitter_runtime_binding.node */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				D14E435E21EF8D6C001882BC /* node in Copy Executables */,
+				D1EB7CFB21F375B6001688EA /* bash-language-server in Copy Executables */,
+				D1EB7CFC21F375B6001688EA /* tree_sitter_bash_binding.node in Copy Executables */,
+				D1EB7CFD21F375B6001688EA /* tree_sitter_runtime_binding.node in Copy Executables */,
 			);
 			name = "Copy Executables";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,7 +73,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				D14E435F21EF8D80001882BC /* node in Copy Executables */,
 			);
 			name = "Copy Executables";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,9 +87,8 @@
 		D13EB15F21EA5B1600E56DC9 /* LSPClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSPClientTests.m; sourceTree = "<group>"; };
 		D13EB16121EA5B1600E56DC9 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
 		D13EB16F21EA5B6000E56DC9 /* bash-language-server.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bash-language-server.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D13EB17121EA5B6000E56DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D13EB17121EA5B6000E56DC9 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
 		D13EB17521EA5B8600E56DC9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D13EB17821EA5BFB00E56DC9 /* node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = node; sourceTree = "<group>"; };
 		D13EB17A21EA5CE500E56DC9 /* LSPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSPClient.h; sourceTree = "<group>"; };
 		D13EB17B21EA5CE500E56DC9 /* LSPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSPClient.m; sourceTree = "<group>"; };
 		D14C4CA321EB3C6B00278697 /* Hello World.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "Hello World.sh"; sourceTree = "<group>"; };
@@ -97,8 +98,10 @@
 		D14C4CE821EDDE7000278697 /* LSPCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSPCommon.m; sourceTree = "<group>"; };
 		D14C4CF521EF64AC00278697 /* vscode-html-languageserver.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "vscode-html-languageserver.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14C4CF721EF64AC00278697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D14E436521F1E6E3001882BC /* LSPKitCopyBundleResources.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = LSPKitCopyBundleResources.sh; sourceTree = "<group>"; };
 		D16CF2B521F20C64003A6943 /* Readme.markdown */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.markdown; sourceTree = "<group>"; };
+		D1EB7CF521F3758F001688EA /* tree_sitter_bash_binding.node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = tree_sitter_bash_binding.node; sourceTree = "<group>"; };
+		D1EB7CF621F3759A001688EA /* bash-language-server */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "bash-language-server"; sourceTree = "<group>"; };
+		D1EB7CF721F3759E001688EA /* tree_sitter_runtime_binding.node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = tree_sitter_runtime_binding.node; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				D13EB17121EA5B6000E56DC9 /* Info.plist */,
+				D1EB7CF621F3759A001688EA /* bash-language-server */,
+				D1EB7CF521F3758F001688EA /* tree_sitter_bash_binding.node */,
+				D1EB7CF721F3759E001688EA /* tree_sitter_runtime_binding.node */,
 			);
 			path = "bash-language-server";
 			sourceTree = "<group>";
@@ -187,8 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				D13EB17521EA5B8600E56DC9 /* README.md */,
-				D13EB17821EA5BFB00E56DC9 /* node */,
-				D14E436521F1E6E3001882BC /* LSPKitCopyBundleResources.sh */,
 				D13EB17021EA5B6000E56DC9 /* bash-language-server */,
 				D14C4CF621EF64AC00278697 /* vscode-html-languageserver */,
 			);
@@ -254,7 +258,6 @@
 			buildConfigurationList = D13EB17221EA5B6000E56DC9 /* Build configuration list for PBXNativeTarget "bash-language-server" */;
 			buildPhases = (
 				D13EB17E21EA5DFF00E56DC9 /* Copy Executables */,
-				D14E436621F1E746001882BC /* Copy Bundle Resources */,
 			);
 			buildRules = (
 			);
@@ -270,7 +273,6 @@
 			buildConfigurationList = D14C4CF821EF64AC00278697 /* Build configuration list for PBXNativeTarget "vscode-html-languageserver" */;
 			buildPhases = (
 				D14C4D0021EF67E700278697 /* Copy Executables */,
-				D14E436721F1EE07001882BC /* Copy Bundle Resources */,
 			);
 			buildRules = (
 			);
@@ -343,51 +345,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		D14E436621F1E746001882BC /* Copy Bundle Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Bundles/$(TARGETNAME)/node_modules",
-			);
-			name = "Copy Bundle Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/node_modules",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"${SRCROOT}/Bundles/LSPKitCopyBundleResources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D14E436721F1EE07001882BC /* Copy Bundle Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Bundles/$(TARGETNAME)/node_modules",
-			);
-			name = "Copy Bundle Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/node_modules",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"${SRCROOT}/Bundles/LSPKitCopyBundleResources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D13EB14D21EA5B1600E56DC9 /* Sources */ = {

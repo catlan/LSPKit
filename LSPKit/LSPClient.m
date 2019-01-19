@@ -385,8 +385,7 @@ NSString *ParsenContentType(NSString *str, NSDictionary **params) {
         NSString *plugInsPath = [[NSBundle bundleForClass:[self class]] builtInPlugInsPath];
         NSString *bashBundle = [plugInsPath stringByAppendingPathComponent:@"bash-language-server.bundle"];
         NSBundle *bundle = [NSBundle bundleWithPath:bashBundle];
-        NSString *nodeAppPath = [[bundle resourcePath] stringByAppendingPathComponent:@"node_modules/bash-language-server/bin/main.js"];
-        sharedServer =  [[[self class] alloc] initWithPath:[bundle executablePath] arguments:[NSArray arrayWithObjects:nodeAppPath, @"start", nil] currentDirectoryPath:[bundle resourcePath] languageID:@"shellscript"];
+        sharedServer =  [[[self class] alloc] initWithPath:[bundle executablePath] arguments:[NSArray arrayWithObjects:@"start", nil] currentDirectoryPath:[bundle resourcePath] languageID:@"shellscript"];
     });
     return sharedServer;
 }

@@ -1,6 +1,9 @@
 ##  Setup
 
-Node.js from https://nodejs.org version 11.6.0 Current.
+Node.js from https://nodejs.org version 10.15.0.
+```shell
+sudo npm install -g pkg
+```
 
 ### bash-language-server
 
@@ -8,8 +11,9 @@ See [bash-language-server](https://github.com/mads-hartmann/bash-language-server
 ```shell
 mkdir tmp
 cd tmp
-npm install bash-language-server -prefix=.
-cp -r node_modules PATH_TO_PROJECT/LSPKit/Bundles/bash-language-server/bash-language-server/
+npm install -prefix=. bash-language-server
+pkg -t node10-macos-x64 -o bash-language-server ./node_modules/bash-language-server/bin/main.js
+cp node_modules/**/*.node ./
 ```
 ### vscode-html-languageserver
 
