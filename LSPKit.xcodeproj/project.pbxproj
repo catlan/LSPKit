@@ -12,13 +12,11 @@
 		D13EB16221EA5B1600E56DC9 /* LSPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D13EB15421EA5B1600E56DC9 /* LSPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D13EB17C21EA5CE500E56DC9 /* LSPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D13EB17A21EA5CE500E56DC9 /* LSPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D13EB17D21EA5CE500E56DC9 /* LSPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D13EB17B21EA5CE500E56DC9 /* LSPClient.m */; };
-		D13EB18321EA661E00E56DC9 /* bash-language-server.bundle in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = D13EB16F21EA5B6000E56DC9 /* bash-language-server.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D14C4CA421EB3C6B00278697 /* Hello World.sh in Resources */ = {isa = PBXBuildFile; fileRef = D14C4CA321EB3C6B00278697 /* Hello World.sh */; };
 		D14C4CDF21ECFBB200278697 /* missing-node.sh in Resources */ = {isa = PBXBuildFile; fileRef = D14C4CDD21ECFBB200278697 /* missing-node.sh */; };
 		D14C4CE021ECFBB200278697 /* parse-problems.sh in Resources */ = {isa = PBXBuildFile; fileRef = D14C4CDE21ECFBB200278697 /* parse-problems.sh */; };
 		D14C4CE921EDDE7000278697 /* LSPCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = D14C4CE721EDDE7000278697 /* LSPCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D14C4CEA21EDDE7000278697 /* LSPCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D14C4CE821EDDE7000278697 /* LSPCommon.m */; };
-		D14C4CFE21EF677700278697 /* vscode-html-languageserver.bundle in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = D14C4CF521EF64AC00278697 /* vscode-html-languageserver.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D1EB7CFB21F375B6001688EA /* bash-language-server in Copy Executables */ = {isa = PBXBuildFile; fileRef = D1EB7CF621F3759A001688EA /* bash-language-server */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D1EB7CFC21F375B6001688EA /* tree_sitter_bash_binding.node in Copy Executables */ = {isa = PBXBuildFile; fileRef = D1EB7CF521F3758F001688EA /* tree_sitter_bash_binding.node */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D1EB7CFD21F375B6001688EA /* tree_sitter_runtime_binding.node in Copy Executables */ = {isa = PBXBuildFile; fileRef = D1EB7CF721F3759E001688EA /* tree_sitter_runtime_binding.node */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -33,12 +31,19 @@
 			remoteGlobalIDString = D13EB15021EA5B1600E56DC9;
 			remoteInfo = LSPClient;
 		};
-		D13EB18421EA665C00E56DC9 /* PBXContainerItemProxy */ = {
+		D1EB7D0921F38B11001688EA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D13EB14821EA5B1600E56DC9 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D13EB16E21EA5B6000E56DC9;
 			remoteInfo = "bash-language-server";
+		};
+		D1EB7D0B21F38B11001688EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D13EB14821EA5B1600E56DC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D14C4CF421EF64AC00278697;
+			remoteInfo = "vscode-html-languageserver";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -54,18 +59,6 @@
 				D1EB7CFD21F375B6001688EA /* tree_sitter_runtime_binding.node in Copy Executables */,
 			);
 			name = "Copy Executables";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D13EB18221EA661200E56DC9 /* Copy PlugIns */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				D14C4CFE21EF677700278697 /* vscode-html-languageserver.bundle in Copy PlugIns */,
-				D13EB18321EA661E00E56DC9 /* bash-language-server.bundle in Copy PlugIns */,
-			);
-			name = "Copy PlugIns";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D14C4D0021EF67E700278697 /* Copy Executables */ = {
@@ -227,12 +220,10 @@
 				D13EB14D21EA5B1600E56DC9 /* Sources */,
 				D13EB14E21EA5B1600E56DC9 /* Frameworks */,
 				D13EB14F21EA5B1600E56DC9 /* Resources */,
-				D13EB18221EA661200E56DC9 /* Copy PlugIns */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D13EB18521EA665C00E56DC9 /* PBXTargetDependency */,
 			);
 			name = LSPKit;
 			productName = LSPClient;
@@ -250,6 +241,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				D1EB7D0A21F38B11001688EA /* PBXTargetDependency */,
+				D1EB7D0C21F38B11001688EA /* PBXTargetDependency */,
 				D13EB15D21EA5B1600E56DC9 /* PBXTargetDependency */,
 			);
 			name = LSPKitTests;
@@ -376,10 +369,15 @@
 			target = D13EB15021EA5B1600E56DC9 /* LSPKit */;
 			targetProxy = D13EB15C21EA5B1600E56DC9 /* PBXContainerItemProxy */;
 		};
-		D13EB18521EA665C00E56DC9 /* PBXTargetDependency */ = {
+		D1EB7D0A21F38B11001688EA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D13EB16E21EA5B6000E56DC9 /* bash-language-server */;
-			targetProxy = D13EB18421EA665C00E56DC9 /* PBXContainerItemProxy */;
+			targetProxy = D1EB7D0921F38B11001688EA /* PBXContainerItemProxy */;
+		};
+		D1EB7D0C21F38B11001688EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D14C4CF421EF64AC00278697 /* vscode-html-languageserver */;
+			targetProxy = D1EB7D0B21F38B11001688EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

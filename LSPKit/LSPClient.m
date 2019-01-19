@@ -378,14 +378,31 @@ NSString *ParsenContentType(NSString *str, NSDictionary **params) {
     return notificationCenter;
 }
 
++ (NSString *)languageServersPath {
+    NSString *contentsPath = @"Contents/Library/Language Servers";
+    NSString *path = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:contentsPath];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path] == NO) {
+        // In case of unit test Agents.
+        NSArray *components = [[[NSBundle bundleForClass:[self class]] bundlePath] pathComponents];
+        if ([components count]) {
+            components = [components subarrayWithRange:NSMakeRange(0, [components count] - 1)];
+            path = [NSString pathWithComponents:components];
+        }
+    }
+    return path;
+}
+
 + (instancetype)sharedBashServer {
     static id sharedServer = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString *plugInsPath = [[NSBundle bundleForClass:[self class]] builtInPlugInsPath];
-        NSString *bashBundle = [plugInsPath stringByAppendingPathComponent:@"bash-language-server.bundle"];
-        NSBundle *bundle = [NSBundle bundleWithPath:bashBundle];
-        sharedServer =  [[[self class] alloc] initWithPath:[bundle executablePath] arguments:[NSArray arrayWithObjects:@"start", nil] currentDirectoryPath:nil languageID:@"shellscript"];
+        NSString *bundlePath = [[[self class] languageServersPath] stringByAppendingPathComponent:@"bash-language-server.bundle"];
+        NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+        if (bundle) {
+            sharedServer =  [[[self class] alloc] initWithPath:[bundle executablePath] arguments:[NSArray arrayWithObjects:@"start", nil] currentDirectoryPath:nil languageID:@"shellscript"];
+        } else {
+            NSLog(@"Could not find bundle %@", bundlePath);
+        }
     });
     return sharedServer;
 }
@@ -394,10 +411,13 @@ NSString *ParsenContentType(NSString *str, NSDictionary **params) {
     static id sharedServer = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString *plugInsPath = [[NSBundle bundleForClass:[self class]] builtInPlugInsPath];
-        NSString *bundlePath = [plugInsPath stringByAppendingPathComponent:@"vscode-html-languageserver.bundle"];
+        NSString *bundlePath = [[[self class] languageServersPath] stringByAppendingPathComponent:@"vscode-html-languageserver.bundle"];
         NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
-        sharedServer = [[[self class] alloc] initWithPath:[bundle executablePath] arguments:[NSArray arrayWithObjects:@"--stdio", nil] currentDirectoryPath:nil languageID:@"html"];
+        if (bundle) {
+            sharedServer = [[[self class] alloc] initWithPath:[bundle executablePath] arguments:[NSArray arrayWithObjects:@"--stdio", nil] currentDirectoryPath:nil languageID:@"html"];
+        } else {
+            NSLog(@"Could not find bundle %@", bundlePath);
+        }
     });
     return sharedServer;
 }

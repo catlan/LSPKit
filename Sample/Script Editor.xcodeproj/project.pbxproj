@@ -19,6 +19,7 @@
 		D14C4CE521EDC9AC00278697 /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = D14C4CE121EDC9AC00278697 /* NoodleLineNumberView.m */; };
 		D14C4CE621EDC9AC00278697 /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = D14C4CE421EDC9AC00278697 /* NoodleLineNumberMarker.m */; };
 		D14E436121EF927C001882BC /* Diagnostic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E436021EF927C001882BC /* Diagnostic.storyboard */; };
+		D1EB7D0521F386EA001688EA /* bash-language-server.bundle in Embed Language Servers */ = {isa = PBXBuildFile; fileRef = D14C4CD321EBE2D600278697 /* bash-language-server.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,17 @@
 				D14C4CD521EBE2FD00278697 /* LSPKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1EB7D0121F386DB001688EA /* Embed Language Servers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "Contents/Library/Language Servers";
+			dstSubfolderSpec = 1;
+			files = (
+				D1EB7D0521F386EA001688EA /* bash-language-server.bundle in Embed Language Servers */,
+			);
+			name = "Embed Language Servers";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -192,6 +204,7 @@
 				D14C4CAB21EBE2A700278697 /* Frameworks */,
 				D14C4CAC21EBE2A700278697 /* Resources */,
 				D14C4CD821EBE2FD00278697 /* Embed Frameworks */,
+				D1EB7D0121F386DB001688EA /* Embed Language Servers */,
 			);
 			buildRules = (
 			);
