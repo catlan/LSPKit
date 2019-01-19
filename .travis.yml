@@ -1,4 +1,4 @@
 language: objective-c
 osx_image: xcode10.1
 
-xcodebuild clean build test -project LSPKit.xcodeproj -scheme LSPKit
+script: xcodebuild clean build test -project LSPKit.xcodeproj -scheme LSPKit
