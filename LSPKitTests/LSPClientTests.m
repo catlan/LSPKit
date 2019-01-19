@@ -159,17 +159,19 @@
 }
 
 - (void)testUnexpectedTermination {
-    XCTestExpectation *expectation1 = [[XCTestExpectation alloc] initWithDescription:@"termination"];
+    XCTestExpectation *expectation1 = [[XCTestExpectation alloc] initWithDescription:@"initialized"];
+    XCTestExpectation *expectation2 = [[XCTestExpectation alloc] initWithDescription:@"termination"];
     LSPClient *client = [LSPClient sharedBashServer];
     [client addTerminationObserver:self block:^(LSPClient *client) {
         XCTAssertTrue([NSThread isMainThread], @"");
-        [expectation1 fulfill];
+        [expectation2 fulfill];
     }];
     [client initialWithCompletionHandler:^(NSError *error) {
+        [expectation1 fulfill];
         NSTask *task = [client valueForKey:@"task"];
         [task terminate];
     }];
-    [self waitForExpectations:[NSArray arrayWithObjects:expectation1, nil] timeout:10.0];
+    [self waitForExpectations:[NSArray arrayWithObjects:expectation1, expectation2, nil] timeout:30.0];
 }
 
 - (void)testLSPPositon {
