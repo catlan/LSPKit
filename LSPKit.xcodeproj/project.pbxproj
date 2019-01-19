@@ -22,6 +22,7 @@
 		D1EB7CFB21F375B6001688EA /* bash-language-server in Copy Executables */ = {isa = PBXBuildFile; fileRef = D1EB7CF621F3759A001688EA /* bash-language-server */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D1EB7CFC21F375B6001688EA /* tree_sitter_bash_binding.node in Copy Executables */ = {isa = PBXBuildFile; fileRef = D1EB7CF521F3758F001688EA /* tree_sitter_bash_binding.node */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D1EB7CFD21F375B6001688EA /* tree_sitter_runtime_binding.node in Copy Executables */ = {isa = PBXBuildFile; fileRef = D1EB7CF721F3759E001688EA /* tree_sitter_runtime_binding.node */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D1EB7CFF21F377CD001688EA /* vscode-html-languageserver in Copy Executables */ = {isa = PBXBuildFile; fileRef = D1EB7CFE21F377CD001688EA /* vscode-html-languageserver */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				D1EB7CFF21F377CD001688EA /* vscode-html-languageserver in Copy Executables */,
 			);
 			name = "Copy Executables";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,11 +99,12 @@
 		D14C4CE721EDDE7000278697 /* LSPCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSPCommon.h; sourceTree = "<group>"; };
 		D14C4CE821EDDE7000278697 /* LSPCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSPCommon.m; sourceTree = "<group>"; };
 		D14C4CF521EF64AC00278697 /* vscode-html-languageserver.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "vscode-html-languageserver.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D14C4CF721EF64AC00278697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D14C4CF721EF64AC00278697 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
 		D16CF2B521F20C64003A6943 /* Readme.markdown */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.markdown; sourceTree = "<group>"; };
 		D1EB7CF521F3758F001688EA /* tree_sitter_bash_binding.node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = tree_sitter_bash_binding.node; sourceTree = "<group>"; };
 		D1EB7CF621F3759A001688EA /* bash-language-server */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "bash-language-server"; sourceTree = "<group>"; };
 		D1EB7CF721F3759E001688EA /* tree_sitter_runtime_binding.node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = tree_sitter_runtime_binding.node; sourceTree = "<group>"; };
+		D1EB7CFE21F377CD001688EA /* vscode-html-languageserver */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "vscode-html-languageserver"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				D14C4CF721EF64AC00278697 /* Info.plist */,
+				D1EB7CFE21F377CD001688EA /* vscode-html-languageserver */,
 			);
 			path = "vscode-html-languageserver";
 			sourceTree = "<group>";

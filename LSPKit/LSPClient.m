@@ -385,7 +385,7 @@ NSString *ParsenContentType(NSString *str, NSDictionary **params) {
         NSString *plugInsPath = [[NSBundle bundleForClass:[self class]] builtInPlugInsPath];
         NSString *bashBundle = [plugInsPath stringByAppendingPathComponent:@"bash-language-server.bundle"];
         NSBundle *bundle = [NSBundle bundleWithPath:bashBundle];
-        sharedServer =  [[[self class] alloc] initWithPath:[bundle executablePath] arguments:[NSArray arrayWithObjects:@"start", nil] currentDirectoryPath:[bundle resourcePath] languageID:@"shellscript"];
+        sharedServer =  [[[self class] alloc] initWithPath:[bundle executablePath] arguments:[NSArray arrayWithObjects:@"start", nil] currentDirectoryPath:nil languageID:@"shellscript"];
     });
     return sharedServer;
 }
@@ -397,8 +397,7 @@ NSString *ParsenContentType(NSString *str, NSDictionary **params) {
         NSString *plugInsPath = [[NSBundle bundleForClass:[self class]] builtInPlugInsPath];
         NSString *bundlePath = [plugInsPath stringByAppendingPathComponent:@"vscode-html-languageserver.bundle"];
         NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
-        NSString *nodeAppPath = [[bundle resourcePath] stringByAppendingPathComponent:@"node_modules/vscode-html-languageserver-bin/htmlServerMain.js"];
-        sharedServer = [[[self class] alloc] initWithPath:[bundle executablePath] arguments:[NSArray arrayWithObjects:nodeAppPath, @"--stdio", nil] currentDirectoryPath:[bundle resourcePath] languageID:@"html"];
+        sharedServer = [[[self class] alloc] initWithPath:[bundle executablePath] arguments:[NSArray arrayWithObjects:@"--stdio", nil] currentDirectoryPath:nil languageID:@"html"];
     });
     return sharedServer;
 }

@@ -21,7 +21,7 @@ See [vscode-html-languageserver](https://github.com/Microsoft/vscode/tree/master
 ```shell
 mkdir tmp
 cd tmp
-npm install vscode-html-languageserver-bin -prefix=.
-cp -r node_modules PATH_TO_PROJECT/LSPKit/Bundles/vscode-html-languageserver/vscode-html-languageserver/
+npm install -prefix=. vscode-html-languageserver-bin
+pkg -t node10-macos-x64 -o vscode-html-languageserver ./node_modules/vscode-html-languageserver-bin/htmlServerMain.js
 ```
 
