@@ -20,6 +20,8 @@
 		D14C4CE621EDC9AC00278697 /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = D14C4CE421EDC9AC00278697 /* NoodleLineNumberMarker.m */; };
 		D14E436121EF927C001882BC /* Diagnostic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E436021EF927C001882BC /* Diagnostic.storyboard */; };
 		D1EB7D0521F386EA001688EA /* bash-language-server.bundle in Embed Language Servers */ = {isa = PBXBuildFile; fileRef = D14C4CD321EBE2D600278697 /* bash-language-server.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1EB7D1221F47916001688EA /* WorkspaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EB7D1121F47916001688EA /* WorkspaceController.m */; };
+		D1EB7D1821F47A34001688EA /* DocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EB7D1721F47A34001688EA /* DocumentController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,10 @@
 		D14C4CE321EDC9AC00278697 /* NoodleLineNumberMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberMarker.h; sourceTree = "<group>"; };
 		D14C4CE421EDC9AC00278697 /* NoodleLineNumberMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberMarker.m; sourceTree = "<group>"; };
 		D14E436021EF927C001882BC /* Diagnostic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diagnostic.storyboard; sourceTree = "<group>"; };
+		D1EB7D1021F47916001688EA /* WorkspaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkspaceController.h; sourceTree = "<group>"; };
+		D1EB7D1121F47916001688EA /* WorkspaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkspaceController.m; sourceTree = "<group>"; };
+		D1EB7D1621F47A34001688EA /* DocumentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentController.h; sourceTree = "<group>"; };
+		D1EB7D1721F47A34001688EA /* DocumentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocumentController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,10 @@
 				D14C4CE421EDC9AC00278697 /* NoodleLineNumberMarker.m */,
 				D14C4CE221EDC9AC00278697 /* NoodleLineNumberView.h */,
 				D14C4CE121EDC9AC00278697 /* NoodleLineNumberView.m */,
+				D1EB7D1021F47916001688EA /* WorkspaceController.h */,
+				D1EB7D1121F47916001688EA /* WorkspaceController.m */,
+				D1EB7D1621F47A34001688EA /* DocumentController.h */,
+				D1EB7D1721F47A34001688EA /* DocumentController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -315,6 +325,8 @@
 				D14C4CC121EBE2AA00278697 /* main.m in Sources */,
 				D14C4CE521EDC9AC00278697 /* NoodleLineNumberView.m in Sources */,
 				D14C4CB321EBE2A700278697 /* AppDelegate.m in Sources */,
+				D1EB7D1821F47A34001688EA /* DocumentController.m in Sources */,
+				D1EB7D1221F47916001688EA /* WorkspaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

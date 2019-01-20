@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+#import "DocumentController.h"
 #import <LSPKit/LSPKit.h>
 
 @interface AppDelegate () <LSPClientObserver>
@@ -16,8 +17,11 @@
 
 @implementation AppDelegate
 
+- (void)applicationWillFinishLaunching:(NSNotification *)notification {
+    [DocumentController sharedDocumentController];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
     [[LSPClient sharedBashServer] addObserver:self];
 }
 
